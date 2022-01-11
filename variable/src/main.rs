@@ -1,3 +1,13 @@
 fn main() {
-    println!("Hello, world!");
+    let x = 13;
+    println!("{}", x);
+    let x: f64 = 3.14159;
+    println!("{}", x);
+    let x;
+    x = 0;
+    println!("{}", x);
+    let mut x = 42;
+    println!("{}", x);
+    x = 13;
+    println!("{}", x);
 }
