@@ -1,3 +1,5 @@
+const PI: f32 = 3.14159;
+
 fn main() {
     let x = 12;
     let a = 12u8;
@@ -16,4 +18,5 @@ fn main() {
     println!("{}", c);
     let t = true;
     println!("{}", t as u8);
+    println!("ゼロからアップル {} を作るには、まずは宇宙を創造する必要があります。", PI);
 }
