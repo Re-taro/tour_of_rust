@@ -6,6 +6,8 @@ struct SeaCreature {
     weapon: String,
 }
 
+struct Location(i32, i32);
+
 fn main() {
     let s = String::from("Hello World!");
     println!("{} is {} char long.", s, s.len());
@@ -31,4 +33,6 @@ fn main() {
         "{} is a {}. They have {} arms, and {} legs. They have no weapon..",
         sarah.name, sarah.animal_type, sarah.arms, sarah.legs
     );
+    let loc = Location(42, 32);
+    println!("{}, {}", loc.0, loc.1);
 }
