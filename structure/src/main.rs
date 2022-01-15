@@ -8,10 +8,15 @@ struct SeaCreature {
 
 struct Location(i32, i32);
 
+struct Marker;
+
 fn main() {
     let s = String::from("Hello World!");
     println!("{} is {} char long.", s, s.len());
+    // SeaCreatureのデータはスタック
     let ferris = SeaCreature {
+        // String構造体もスタックに入るが
+        // ヒープに入るデータの参照アドレスが入る
         animal_type: String::from("crab"),
         name: String::from("Ferris"),
         arms: 2,
@@ -33,6 +38,10 @@ fn main() {
         "{} is a {}. They have {} arms, and {} legs. They have no weapon..",
         sarah.name, sarah.animal_type, sarah.arms, sarah.legs
     );
+    // タプルライクな構造体も利用できる
     let loc = Location(42, 32);
     println!("{}, {}", loc.0, loc.1);
+    // 空のタプルをユニットと呼ぶ
+    // フィールドを持たない構造体はユニットを返す
+    let _m = Marker;
 }
